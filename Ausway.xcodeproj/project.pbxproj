@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0123609868E12E93EDBC06FA /* Pods_Ausway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */; };
+		B502CB321CDD2C5100EB84E9 /* WeatherContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CB311CDD2C5100EB84E9 /* WeatherContainer.swift */; };
+		B502CB341CDD2C8300EB84E9 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CB331CDD2C8300EB84E9 /* ChartContainer.swift */; };
+		B50783391CF578D1005DDEF4 /* TaxiDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50783381CF578D1005DDEF4 /* TaxiDataController.swift */; };
+		B507833B1CF5D79C005DDEF4 /* SkybusT1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507833A1CF5D79C005DDEF4 /* SkybusT1.swift */; };
+		B50A17C11CC5BE7F00CCA5F0 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A17C01CC5BE7F00CCA5F0 /* TimeTableViewController.swift */; };
+		B50D45E61CD149E90078C58A /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B50D45E51CD149E90078C58A /* weathericons-regular-webfont.ttf */; };
+		B50D45E91CD153DC0078C58A /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50D45E81CD153DC0078C58A /* WeatherIcon.swift */; };
+		B50D45F21CD163730078C58A /* FeedsChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50D45F11CD163730078C58A /* FeedsChartController.swift */; };
+		B51385111CF8304200BEDB8E /* Domestic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51385101CF8304200BEDB8E /* Domestic.swift */; };
+		B51385131CF830E600BEDB8E /* International.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51385121CF830E600BEDB8E /* International.swift */; };
+		B514022C1CF9B7AF008CE7DD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514022B1CF9B7AF008CE7DD /* Reachability.swift */; };
+		B5143E361CD11CD100B106F5 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5143E351CD11CD100B106F5 /* WeatherController.swift */; };
+		B516B9B71CE403C2005AD3BD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B516B9B61CE403C2005AD3BD /* TabBarController.swift */; };
+		B54807461CC7FDDE00E42976 /* SkybusTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807451CC7FDDE00E42976 /* SkybusTableView.swift */; };
+		B54807481CC7FDED00E42976 /* TaxiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807471CC7FDED00E42976 /* TaxiTableView.swift */; };
+		B548074A1CC7FEC000E42976 /* SkybusTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807491CC7FEC000E42976 /* SkybusTableController.swift */; };
+		B548074C1CC7FECF00E42976 /* TaxiTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B548074B1CC7FECF00E42976 /* TaxiTableController.swift */; };
+		B54AA2A21CC0DF99002BDF75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AA2A11CC0DF99002BDF75 /* AppDelegate.swift */; };
+		B54AA2A41CC0DF99002BDF75 /* AirportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AA2A31CC0DF99002BDF75 /* AirportController.swift */; };
+		B54AA2A71CC0DF99002BDF75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54AA2A51CC0DF99002BDF75 /* Main.storyboard */; };
+		B54AA2A91CC0DF99002BDF75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54AA2A81CC0DF99002BDF75 /* Assets.xcassets */; };
+		B54AA2AC1CC0DF99002BDF75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54AA2AA1CC0DF99002BDF75 /* LaunchScreen.storyboard */; };
+		B54AA2B41CC0E9F8002BDF75 /* PopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */; };
+		B553B6CA1CE3885500AF7A82 /* EstimateFareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */; };
+		B58B2CF21CC228C300D0E778 /* NextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58B2CF11CC228C300D0E778 /* NextTableView.swift */; };
+		B59312BF1CDFAE2D003B981D /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312BE1CDFAE2C003B981D /* LocationController.swift */; };
+		B59312C11CDFAE79003B981D /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312C01CDFAE79003B981D /* RouteViewController.swift */; };
+		B59312C31CDFAE8E003B981D /* DestinationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312C21CDFAE8E003B981D /* DestinationTableView.swift */; };
+		B5988F0F1CF4354C0022C785 /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988F0E1CF4354C0022C785 /* RestAPIManager.swift */; };
+		B5988F111CF4366C0022C785 /* Taxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988F101CF4366C0022C785 /* Taxis.swift */; };
+		B5BCF6501CE86AF9001C9270 /* primary.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */; };
+		B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3679AF72716812E5B11A2729 /* Pods-Ausway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ausway.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ausway/Pods-Ausway.release.xcconfig"; sourceTree = "<group>"; };
+		97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ausway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ausway/Pods-Ausway.debug.xcconfig"; sourceTree = "<group>"; };
+		B502CB311CDD2C5100EB84E9 /* WeatherContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherContainer.swift; sourceTree = "<group>"; };
+		B502CB331CDD2C8300EB84E9 /* ChartContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
+		B50783381CF578D1005DDEF4 /* TaxiDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDataController.swift; sourceTree = "<group>"; };
+		B507833A1CF5D79C005DDEF4 /* SkybusT1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusT1.swift; sourceTree = "<group>"; };
+		B50A17C01CC5BE7F00CCA5F0 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		B50D45E51CD149E90078C58A /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B50D45E81CD153DC0078C58A /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
+		B50D45F11CD163730078C58A /* FeedsChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsChartController.swift; sourceTree = "<group>"; };
+		B51385101CF8304200BEDB8E /* Domestic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Domestic.swift; sourceTree = "<group>"; };
+		B51385121CF830E600BEDB8E /* International.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = International.swift; sourceTree = "<group>"; };
+		B514022B1CF9B7AF008CE7DD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B5143E351CD11CD100B106F5 /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
+		B516B9B61CE403C2005AD3BD /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B54807451CC7FDDE00E42976 /* SkybusTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusTableView.swift; sourceTree = "<group>"; };
+		B54807471CC7FDED00E42976 /* TaxiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiTableView.swift; sourceTree = "<group>"; };
+		B54807491CC7FEC000E42976 /* SkybusTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusTableController.swift; sourceTree = "<group>"; };
+		B548074B1CC7FECF00E42976 /* TaxiTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiTableController.swift; sourceTree = "<group>"; };
+		B54AA29E1CC0DF99002BDF75 /* Ausway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ausway.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B54AA2A11CC0DF99002BDF75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B54AA2A31CC0DF99002BDF75 /* AirportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportController.swift; sourceTree = "<group>"; };
+		B54AA2A61CC0DF99002BDF75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B54AA2A81CC0DF99002BDF75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B54AA2AB1CC0DF99002BDF75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B54AA2AD1CC0DF99002BDF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverController.swift; sourceTree = "<group>"; };
+		B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateFareController.swift; sourceTree = "<group>"; };
+		B58B2CF11CC228C300D0E778 /* NextTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTableView.swift; sourceTree = "<group>"; };
+		B59312BE1CDFAE2C003B981D /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		B59312C01CDFAE79003B981D /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		B59312C21CDFAE8E003B981D /* DestinationTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationTableView.swift; sourceTree = "<group>"; };
+		B5988F0E1CF4354C0022C785 /* RestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
+		B5988F101CF4366C0022C785 /* Taxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxis.swift; sourceTree = "<group>"; };
+		B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = primary.sqlite3; sourceTree = "<group>"; };
+		B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedController.swift; sourceTree = "<group>"; };
+		CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ausway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B54AA29B1CC0DF99002BDF75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0123609868E12E93EDBC06FA /* Pods_Ausway.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87A7F4790531B9AD9DF75D37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */,
+				3679AF72716812E5B11A2729 /* Pods-Ausway.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90B72CC441F20526ECB2DE70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B50A17C41CC5F4F800CCA5F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B50A17C01CC5BE7F00CCA5F0 /* TimeTableViewController.swift */,
+				B54AA2A31CC0DF99002BDF75 /* AirportController.swift */,
+				B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */,
+				B54807491CC7FEC000E42976 /* SkybusTableController.swift */,
+				B548074B1CC7FECF00E42976 /* TaxiTableController.swift */,
+				B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */,
+				B5143E351CD11CD100B106F5 /* WeatherController.swift */,
+				B50D45F11CD163730078C58A /* FeedsChartController.swift */,
+				B502CB311CDD2C5100EB84E9 /* WeatherContainer.swift */,
+				B502CB331CDD2C8300EB84E9 /* ChartContainer.swift */,
+				B59312BE1CDFAE2C003B981D /* LocationController.swift */,
+				B59312C01CDFAE79003B981D /* RouteViewController.swift */,
+				B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */,
+				B516B9B61CE403C2005AD3BD /* TabBarController.swift */,
+				B50783381CF578D1005DDEF4 /* TaxiDataController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B50A17C51CC5F51C00CCA5F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B58B2CF11CC228C300D0E778 /* NextTableView.swift */,
+				B54807451CC7FDDE00E42976 /* SkybusTableView.swift */,
+				B54807471CC7FDED00E42976 /* TaxiTableView.swift */,
+				B59312C21CDFAE8E003B981D /* DestinationTableView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B50D45E71CD149F40078C58A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B50D45E51CD149E90078C58A /* weathericons-regular-webfont.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+		B5276E081CC1E90C00546DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B50D45E81CD153DC0078C58A /* WeatherIcon.swift */,
+				B5988F0E1CF4354C0022C785 /* RestAPIManager.swift */,
+				B5988F101CF4366C0022C785 /* Taxis.swift */,
+				B507833A1CF5D79C005DDEF4 /* SkybusT1.swift */,
+				B51385101CF8304200BEDB8E /* Domestic.swift */,
+				B51385121CF830E600BEDB8E /* International.swift */,
+				B514022B1CF9B7AF008CE7DD /* Reachability.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B54AA2951CC0DF99002BDF75 = {
+			isa = PBXGroup;
+			children = (
+				B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */,
+				B54AA2A01CC0DF99002BDF75 /* AusWay */,
+				B54AA29F1CC0DF99002BDF75 /* Products */,
+				87A7F4790531B9AD9DF75D37 /* Pods */,
+				90B72CC441F20526ECB2DE70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B54AA29F1CC0DF99002BDF75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B54AA29E1CC0DF99002BDF75 /* Ausway.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B54AA2A01CC0DF99002BDF75 /* AusWay */ = {
+			isa = PBXGroup;
+			children = (
+				B50D45E71CD149F40078C58A /* fonts */,
+				B50A17C51CC5F51C00CCA5F0 /* View */,
+				B50A17C41CC5F4F800CCA5F0 /* Controller */,
+				B5276E081CC1E90C00546DAF /* Model */,
+				B54AA2A11CC0DF99002BDF75 /* AppDelegate.swift */,
+				B54AA2A51CC0DF99002BDF75 /* Main.storyboard */,
+				B54AA2A81CC0DF99002BDF75 /* Assets.xcassets */,
+				B54AA2AA1CC0DF99002BDF75 /* LaunchScreen.storyboard */,
+				B54AA2AD1CC0DF99002BDF75 /* Info.plist */,
+			);
+			name = AusWay;
+			path = Ausway;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B54AA29D1CC0DF99002BDF75 /* Ausway */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B54AA2B01CC0DF99002BDF75 /* Build configuration list for PBXNativeTarget "Ausway" */;
+			buildPhases = (
+				877F71D436765A148014FDA4 /* Check Pods Manifest.lock */,
+				B54AA29A1CC0DF99002BDF75 /* Sources */,
+				B54AA29B1CC0DF99002BDF75 /* Frameworks */,
+				B54AA29C1CC0DF99002BDF75 /* Resources */,
+				4F88181E59F1FEC32B5712CB /* Embed Pods Frameworks */,
+				139082F355CD53AA4522260E /* Copy Pods Resources */,
+				B5CF426B1CCE3FC100D0CD2B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ausway;
+			productName = Ausway;
+			productReference = B54AA29E1CC0DF99002BDF75 /* Ausway.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B54AA2961CC0DF99002BDF75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = RMIT;
+				TargetAttributes = {
+					B54AA29D1CC0DF99002BDF75 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8DNE6H9YQX;
+					};
+				};
+			};
+			buildConfigurationList = B54AA2991CC0DF99002BDF75 /* Build configuration list for PBXProject "Ausway" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B54AA2951CC0DF99002BDF75;
+			productRefGroup = B54AA29F1CC0DF99002BDF75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B54AA29D1CC0DF99002BDF75 /* Ausway */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B54AA29C1CC0DF99002BDF75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54AA2AC1CC0DF99002BDF75 /* LaunchScreen.storyboard in Resources */,
+				B54AA2A91CC0DF99002BDF75 /* Assets.xcassets in Resources */,
+				B5BCF6501CE86AF9001C9270 /* primary.sqlite3 in Resources */,
+				B50D45E61CD149E90078C58A /* weathericons-regular-webfont.ttf in Resources */,
+				B54AA2A71CC0DF99002BDF75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		139082F355CD53AA4522260E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ausway/Pods-Ausway-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F88181E59F1FEC32B5712CB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ausway/Pods-Ausway-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877F71D436765A148014FDA4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CF426B1CCE3FC100D0CD2B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c83c45ca13680f9f55a09d16cc5137a4e9f06b60 c6550f1f4fa5b13f9c8600f613277496883318396109e251a316a7b3a287fc30";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B54AA29A1CC0DF99002BDF75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B502CB341CDD2C8300EB84E9 /* ChartContainer.swift in Sources */,
+				B50D45E91CD153DC0078C58A /* WeatherIcon.swift in Sources */,
+				B50D45F21CD163730078C58A /* FeedsChartController.swift in Sources */,
+				B50A17C11CC5BE7F00CCA5F0 /* TimeTableViewController.swift in Sources */,
+				B5988F111CF4366C0022C785 /* Taxis.swift in Sources */,
+				B553B6CA1CE3885500AF7A82 /* EstimateFareController.swift in Sources */,
+				B502CB321CDD2C5100EB84E9 /* WeatherContainer.swift in Sources */,
+				B514022C1CF9B7AF008CE7DD /* Reachability.swift in Sources */,
+				B548074A1CC7FEC000E42976 /* SkybusTableController.swift in Sources */,
+				B50783391CF578D1005DDEF4 /* TaxiDataController.swift in Sources */,
+				B59312BF1CDFAE2D003B981D /* LocationController.swift in Sources */,
+				B54AA2A41CC0DF99002BDF75 /* AirportController.swift in Sources */,
+				B58B2CF21CC228C300D0E778 /* NextTableView.swift in Sources */,
+				B54AA2B41CC0E9F8002BDF75 /* PopOverController.swift in Sources */,
+				B54807461CC7FDDE00E42976 /* SkybusTableView.swift in Sources */,
+				B507833B1CF5D79C005DDEF4 /* SkybusT1.swift in Sources */,
+				B54AA2A21CC0DF99002BDF75 /* AppDelegate.swift in Sources */,
+				B5988F0F1CF4354C0022C785 /* RestAPIManager.swift in Sources */,
+				B54807481CC7FDED00E42976 /* TaxiTableView.swift in Sources */,
+				B51385111CF8304200BEDB8E /* Domestic.swift in Sources */,
+				B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */,
+				B516B9B71CE403C2005AD3BD /* TabBarController.swift in Sources */,
+				B548074C1CC7FECF00E42976 /* TaxiTableController.swift in Sources */,
+				B59312C31CDFAE8E003B981D /* DestinationTableView.swift in Sources */,
+				B5143E361CD11CD100B106F5 /* WeatherController.swift in Sources */,
+				B51385131CF830E600BEDB8E /* International.swift in Sources */,
+				B59312C11CDFAE79003B981D /* RouteViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B54AA2A51CC0DF99002BDF75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54AA2A61CC0DF99002BDF75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B54AA2AA1CC0DF99002BDF75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B54AA2AB1CC0DF99002BDF75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B54AA2AE1CC0DF99002BDF75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B54AA2AF1CC0DF99002BDF75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B54AA2B11CC0DF99002BDF75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = Ausway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Ausway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Debug;
+		};
+		B54AA2B21CC0DF99002BDF75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3679AF72716812E5B11A2729 /* Pods-Ausway.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ausway/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Ausway;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B54AA2991CC0DF99002BDF75 /* Build configuration list for PBXProject "Ausway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54AA2AE1CC0DF99002BDF75 /* Debug */,
+				B54AA2AF1CC0DF99002BDF75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B54AA2B01CC0DF99002BDF75 /* Build configuration list for PBXNativeTarget "Ausway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B54AA2B11CC0DF99002BDF75 /* Debug */,
+				B54AA2B21CC0DF99002BDF75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B54AA2961CC0DF99002BDF75 /* Project object */;
+}

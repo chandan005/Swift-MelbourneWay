@@ -1,0 +1,6 @@
+framework module Pods_Ausway {
+  umbrella header "Pods-Ausway-umbrella.h"
+
+  export *
+  module * { export * }
+}
