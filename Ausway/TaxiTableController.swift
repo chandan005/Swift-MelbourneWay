@@ -57,7 +57,7 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
     }
     
     func addTaxiData() {
-        RestAPIManager.sharedInstance.url = "http://localhost:3000/taxis"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/taxis"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
                 for n in json {
@@ -77,7 +77,7 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
    
     
     func addSomething(){
-        let endPoint: String = "http://192.168.0.4.xip.io:3000/taxis"
+        let endPoint: String = "http://www.melbournecloudstudio.com/taxis"
         guard let url = NSURL(string: endPoint) else {
             print("Error: cannot create URL")
             return

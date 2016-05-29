@@ -77,9 +77,6 @@ class RouteViewController: UIViewController {
                 
                 var timeVar = time
                 var routeVar = routes
-                //let distance = (routeResponse.first?.distance)! / 1000.0
-                //let cost:Int = 250
-                //self.priceLabel.text = String(cost)
                 
                 routeVar.append(quickestRouteForSegment)
                 

@@ -54,7 +54,7 @@ class SkybusTableController: UITableViewController, UINavigationControllerDelega
     }
     
     func addSkybusT1Data() {
-        RestAPIManager.sharedInstance.url = "http://localhost:3000/skybus_t1s/allTimeQueries"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t1s/allTimeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
             for n in json {

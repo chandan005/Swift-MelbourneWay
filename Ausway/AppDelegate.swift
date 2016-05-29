@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        let postEndpoint: String = "http://localhost:3000/access_points"
+        let postEndpoint: String = "http://www.melbournecloudstudio.com/access_points"
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
         let postParams : [String: AnyObject] = ["ssid":  self.ssid, "bssid": self.bssid, "mac_address": UIDevice.currentDevice().identifierForVendor!.UUIDString, "nearby_point": ""]

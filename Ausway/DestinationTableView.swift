@@ -60,7 +60,7 @@ extension DestinationTableView: UITableViewDelegate {
             sender.selected = true
             if (sender.state == .Selected){
                 sender.backgroundColor = UIColor(red: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-                sender.setTitle("Checked", forState: .Selected)
+                sender.setTitle("Check", forState: .Selected)
                 
             } else {
                 sender.backgroundColor = UIColor.orangeColor()

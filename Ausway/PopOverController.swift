@@ -155,7 +155,7 @@ class PopOverController: UIViewController {
     }
     
     func addSkybusT1Data() {
-        RestAPIManager.sharedInstance.url = "http://localhost:3000/skybus_t1s/timeQueries"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t1s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
             for n in json {
@@ -172,7 +172,7 @@ class PopOverController: UIViewController {
     }
     
     func addSkybusT3Data() {
-        RestAPIManager.sharedInstance.url = "http://localhost:3000/skybus_t3s/timeQueries"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t3s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
             for n in json {
@@ -188,7 +188,7 @@ class PopOverController: UIViewController {
         }
     }
     func addSkybusT4Data() {
-        RestAPIManager.sharedInstance.url = "http://localhost:3000/skybus_t4s/timeQueries"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t3s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
             for n in json {
@@ -205,7 +205,7 @@ class PopOverController: UIViewController {
     }
     
     func postDomesticData(){
-        let postEndpoint: String = "http://localhost:3000/domestics"
+        let postEndpoint: String = "http://www.melbournecloudstudio.com/domestics"
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
         let postParams : [String: AnyObject] = ["tapped_timestamp":  NSDate().stringFromDate(), "mac_address": UIDevice.currentDevice().identifierForVendor!.UUIDString]
@@ -234,7 +234,7 @@ class PopOverController: UIViewController {
     }
     
     func postInternationalData(){
-        let postEndpoint: String = "http://localhost:3000/internationals"
+        let postEndpoint: String = "http://www.melbournecloudstudio.com/internationals"
         let url = NSURL(string: postEndpoint)!
         let session = NSURLSession.sharedSession()
         let postParams : [String: AnyObject] = ["tapped_timestamp":  NSDate().stringFromDate(), "mac_address": UIDevice.currentDevice().identifierForVendor!.UUIDString]

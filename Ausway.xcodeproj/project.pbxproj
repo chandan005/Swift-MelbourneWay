@@ -20,7 +20,6 @@
 		B51385131CF830E600BEDB8E /* International.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51385121CF830E600BEDB8E /* International.swift */; };
 		B514022C1CF9B7AF008CE7DD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514022B1CF9B7AF008CE7DD /* Reachability.swift */; };
 		B5143E361CD11CD100B106F5 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5143E351CD11CD100B106F5 /* WeatherController.swift */; };
-		B516B9B71CE403C2005AD3BD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B516B9B61CE403C2005AD3BD /* TabBarController.swift */; };
 		B54807461CC7FDDE00E42976 /* SkybusTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807451CC7FDDE00E42976 /* SkybusTableView.swift */; };
 		B54807481CC7FDED00E42976 /* TaxiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807471CC7FDED00E42976 /* TaxiTableView.swift */; };
 		B548074A1CC7FEC000E42976 /* SkybusTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54807491CC7FEC000E42976 /* SkybusTableController.swift */; };
@@ -38,7 +37,6 @@
 		B59312C31CDFAE8E003B981D /* DestinationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312C21CDFAE8E003B981D /* DestinationTableView.swift */; };
 		B5988F0F1CF4354C0022C785 /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988F0E1CF4354C0022C785 /* RestAPIManager.swift */; };
 		B5988F111CF4366C0022C785 /* Taxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5988F101CF4366C0022C785 /* Taxis.swift */; };
-		B5BCF6501CE86AF9001C9270 /* primary.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */; };
 		B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +55,6 @@
 		B51385121CF830E600BEDB8E /* International.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = International.swift; sourceTree = "<group>"; };
 		B514022B1CF9B7AF008CE7DD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		B5143E351CD11CD100B106F5 /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
-		B516B9B61CE403C2005AD3BD /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B54807451CC7FDDE00E42976 /* SkybusTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusTableView.swift; sourceTree = "<group>"; };
 		B54807471CC7FDED00E42976 /* TaxiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiTableView.swift; sourceTree = "<group>"; };
 		B54807491CC7FEC000E42976 /* SkybusTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusTableController.swift; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 		B59312C21CDFAE8E003B981D /* DestinationTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationTableView.swift; sourceTree = "<group>"; };
 		B5988F0E1CF4354C0022C785 /* RestAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		B5988F101CF4366C0022C785 /* Taxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxis.swift; sourceTree = "<group>"; };
-		B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = primary.sqlite3; sourceTree = "<group>"; };
 		B5CF426C1CCE47FF00D0CD2B /* TwitterFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeedController.swift; sourceTree = "<group>"; };
 		CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ausway.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,7 +123,6 @@
 				B59312BE1CDFAE2C003B981D /* LocationController.swift */,
 				B59312C01CDFAE79003B981D /* RouteViewController.swift */,
 				B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */,
-				B516B9B61CE403C2005AD3BD /* TabBarController.swift */,
 				B50783381CF578D1005DDEF4 /* TaxiDataController.swift */,
 			);
 			name = Controller;
@@ -169,7 +164,6 @@
 		B54AA2951CC0DF99002BDF75 = {
 			isa = PBXGroup;
 			children = (
-				B5BCF64F1CE86AF9001C9270 /* primary.sqlite3 */,
 				B54AA2A01CC0DF99002BDF75 /* AusWay */,
 				B54AA29F1CC0DF99002BDF75 /* Products */,
 				87A7F4790531B9AD9DF75D37 /* Pods */,
@@ -238,7 +232,7 @@
 				TargetAttributes = {
 					B54AA29D1CC0DF99002BDF75 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8DNE6H9YQX;
+						DevelopmentTeam = QB9E778NH9;
 					};
 				};
 			};
@@ -267,7 +261,6 @@
 			files = (
 				B54AA2AC1CC0DF99002BDF75 /* LaunchScreen.storyboard in Resources */,
 				B54AA2A91CC0DF99002BDF75 /* Assets.xcassets in Resources */,
-				B5BCF6501CE86AF9001C9270 /* primary.sqlite3 in Resources */,
 				B50D45E61CD149E90078C58A /* weathericons-regular-webfont.ttf in Resources */,
 				B54AA2A71CC0DF99002BDF75 /* Main.storyboard in Resources */,
 			);
@@ -362,7 +355,6 @@
 				B54807481CC7FDED00E42976 /* TaxiTableView.swift in Sources */,
 				B51385111CF8304200BEDB8E /* Domestic.swift in Sources */,
 				B5CF426D1CCE47FF00D0CD2B /* TwitterFeedController.swift in Sources */,
-				B516B9B71CE403C2005AD3BD /* TabBarController.swift in Sources */,
 				B548074C1CC7FECF00E42976 /* TaxiTableController.swift in Sources */,
 				B59312C31CDFAE8E003B981D /* DestinationTableView.swift in Sources */,
 				B5143E361CD11CD100B106F5 /* WeatherController.swift in Sources */,
@@ -483,11 +475,14 @@
 			baseConfigurationReference = 97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Ausway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Ausway;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Melway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
@@ -497,10 +492,13 @@
 			baseConfigurationReference = 3679AF72716812E5B11A2729 /* Pods-Ausway.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Ausway/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Ausway;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.rmit.s3449996.Melway;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;

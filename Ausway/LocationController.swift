@@ -57,6 +57,7 @@ class LocationController: UIViewController, UITextFieldDelegate {
         checkAddressButtons.first?.layer.cornerRadius = 5
         checkAddressButtons.last?.layer.cornerRadius = 5
         estimateFareButton.layer.cornerRadius = 5
+        viewRouteButton.layer.cornerRadius = 5
         
         
         // TextField Validation
@@ -141,7 +142,7 @@ class LocationController: UIViewController, UITextFieldDelegate {
         
         if (segue.identifier == "estimatefare"){
             let fareCalculator = segue.destinationViewController as! EstimateFareController
-            fareCalculator.traveller = "\(self.currentField.text) to \(self.destinationField.text) is estimated at \(100)"
+            fareCalculator.traveller = " The taxi fare from \(currentField.text) to \(destinationField.text) is estimated at AUD \(95)"
         }
     }
     
@@ -257,12 +258,11 @@ extension LocationController: CLLocationManagerDelegate {
                                                     
                                                     self.checkAddressButtons.filter{$0.tag == 1}.first!.selected = true
                                                     
-                                                    if (self.checkAddressButtons.first?.state == .Selected ){
+                                                    /*if (self.checkAddressButtons.first?.state == .Selected ){
                                                         self.checkAddressButtons.first?.backgroundColor = UIColor(red: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-                                                        self.checkAddressButtons.first?.setTitle("Checked", forState: .Selected)
                                                     } else {
                                                         self.checkAddressButtons.first?.backgroundColor = UIColor.orangeColor()
-                                                    }
+                                                    }*/
                                                 }
         })
         
