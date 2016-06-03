@@ -5,7 +5,7 @@
 //  Created by Chandan Singh on 19/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
-
+// View Controller responsible for displaying the nest 5 Skybus timetable
 import UIKit
 import SwiftyJSON
 
@@ -19,7 +19,6 @@ class TimeTableViewController: UITableViewController, UINavigationControllerDele
         super.viewDidLoad()
         self.title = "Next5"
         navigationController?.delegate = self
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,22 +45,11 @@ class TimeTableViewController: UITableViewController, UINavigationControllerDele
         let tableCell = skybust1[indexPath.row]
         
         cell.timeLabel.text = tableCell.timetable
-        cell.subtitleLabel.text = "00 Hrs 00 Mins"
+        cell.subtitleLabel.text = tableCell.leftTime
         
         return cell
 
      }
-    
-        
-    // Removes all the data from array upon clicking back button
-    /*func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-        if let controller = viewController as? PopOverController {
-            controller.arr.removeAll()
-            controller.time.removeAll()
-            controller.passengerType.selectedSegmentIndex = -1
-            controller.t1t2t3.selectedSegmentIndex = -1
-        }
-    }*/
     
 }
 

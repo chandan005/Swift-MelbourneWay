@@ -10,7 +10,6 @@
 		0123609868E12E93EDBC06FA /* Pods_Ausway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBCC8712D075AC880B98697 /* Pods_Ausway.framework */; };
 		B502CB321CDD2C5100EB84E9 /* WeatherContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CB311CDD2C5100EB84E9 /* WeatherContainer.swift */; };
 		B502CB341CDD2C8300EB84E9 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CB331CDD2C8300EB84E9 /* ChartContainer.swift */; };
-		B50783391CF578D1005DDEF4 /* TaxiDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50783381CF578D1005DDEF4 /* TaxiDataController.swift */; };
 		B507833B1CF5D79C005DDEF4 /* SkybusT1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B507833A1CF5D79C005DDEF4 /* SkybusT1.swift */; };
 		B50A17C11CC5BE7F00CCA5F0 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A17C01CC5BE7F00CCA5F0 /* TimeTableViewController.swift */; };
 		B50D45E61CD149E90078C58A /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B50D45E51CD149E90078C58A /* weathericons-regular-webfont.ttf */; };
@@ -31,6 +30,8 @@
 		B54AA2AC1CC0DF99002BDF75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54AA2AA1CC0DF99002BDF75 /* LaunchScreen.storyboard */; };
 		B54AA2B41CC0E9F8002BDF75 /* PopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */; };
 		B553B6CA1CE3885500AF7A82 /* EstimateFareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */; };
+		B55828C81CFDF1F000EFC524 /* TaxiStand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55828C71CFDF1F000EFC524 /* TaxiStand.swift */; };
+		B55828CA1CFDF25A00EFC524 /* TaxiStandItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55828C91CFDF25A00EFC524 /* TaxiStandItems.swift */; };
 		B58B2CF21CC228C300D0E778 /* NextTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58B2CF11CC228C300D0E778 /* NextTableView.swift */; };
 		B59312BF1CDFAE2D003B981D /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312BE1CDFAE2C003B981D /* LocationController.swift */; };
 		B59312C11CDFAE79003B981D /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59312C01CDFAE79003B981D /* RouteViewController.swift */; };
@@ -45,7 +46,6 @@
 		97192F563722ABC71CCB3C7B /* Pods-Ausway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ausway.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ausway/Pods-Ausway.debug.xcconfig"; sourceTree = "<group>"; };
 		B502CB311CDD2C5100EB84E9 /* WeatherContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherContainer.swift; sourceTree = "<group>"; };
 		B502CB331CDD2C8300EB84E9 /* ChartContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
-		B50783381CF578D1005DDEF4 /* TaxiDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiDataController.swift; sourceTree = "<group>"; };
 		B507833A1CF5D79C005DDEF4 /* SkybusT1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkybusT1.swift; sourceTree = "<group>"; };
 		B50A17C01CC5BE7F00CCA5F0 /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		B50D45E51CD149E90078C58A /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		B54AA2AD1CC0DF99002BDF75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54AA2B31CC0E9F8002BDF75 /* PopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverController.swift; sourceTree = "<group>"; };
 		B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimateFareController.swift; sourceTree = "<group>"; };
+		B55828C71CFDF1F000EFC524 /* TaxiStand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiStand.swift; sourceTree = "<group>"; };
+		B55828C91CFDF25A00EFC524 /* TaxiStandItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiStandItems.swift; sourceTree = "<group>"; };
 		B58B2CF11CC228C300D0E778 /* NextTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextTableView.swift; sourceTree = "<group>"; };
 		B59312BE1CDFAE2C003B981D /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		B59312C01CDFAE79003B981D /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +125,6 @@
 				B59312BE1CDFAE2C003B981D /* LocationController.swift */,
 				B59312C01CDFAE79003B981D /* RouteViewController.swift */,
 				B553B6C91CE3885500AF7A82 /* EstimateFareController.swift */,
-				B50783381CF578D1005DDEF4 /* TaxiDataController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -157,6 +158,8 @@
 				B51385101CF8304200BEDB8E /* Domestic.swift */,
 				B51385121CF830E600BEDB8E /* International.swift */,
 				B514022B1CF9B7AF008CE7DD /* Reachability.swift */,
+				B55828C71CFDF1F000EFC524 /* TaxiStand.swift */,
+				B55828C91CFDF25A00EFC524 /* TaxiStandItems.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -343,11 +346,11 @@
 				B502CB321CDD2C5100EB84E9 /* WeatherContainer.swift in Sources */,
 				B514022C1CF9B7AF008CE7DD /* Reachability.swift in Sources */,
 				B548074A1CC7FEC000E42976 /* SkybusTableController.swift in Sources */,
-				B50783391CF578D1005DDEF4 /* TaxiDataController.swift in Sources */,
 				B59312BF1CDFAE2D003B981D /* LocationController.swift in Sources */,
 				B54AA2A41CC0DF99002BDF75 /* AirportController.swift in Sources */,
 				B58B2CF21CC228C300D0E778 /* NextTableView.swift in Sources */,
 				B54AA2B41CC0E9F8002BDF75 /* PopOverController.swift in Sources */,
+				B55828C81CFDF1F000EFC524 /* TaxiStand.swift in Sources */,
 				B54807461CC7FDDE00E42976 /* SkybusTableView.swift in Sources */,
 				B507833B1CF5D79C005DDEF4 /* SkybusT1.swift in Sources */,
 				B54AA2A21CC0DF99002BDF75 /* AppDelegate.swift in Sources */,
@@ -358,6 +361,7 @@
 				B548074C1CC7FECF00E42976 /* TaxiTableController.swift in Sources */,
 				B59312C31CDFAE8E003B981D /* DestinationTableView.swift in Sources */,
 				B5143E361CD11CD100B106F5 /* WeatherController.swift in Sources */,
+				B55828CA1CFDF25A00EFC524 /* TaxiStandItems.swift in Sources */,
 				B51385131CF830E600BEDB8E /* International.swift in Sources */,
 				B59312C11CDFAE79003B981D /* RouteViewController.swift in Sources */,
 			);

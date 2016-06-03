@@ -47,12 +47,13 @@ class SkybusTableController: UITableViewController, UINavigationControllerDelega
         let tableCell = skybust1[indexPath.row]
         
         cell.mainLabel.text = tableCell.timetable
-        cell.subtitleLabel.text = "00 hrs 00 mins"
+        cell.subtitleLabel.text = tableCell.leftTime
         
         return cell
         
     }
     
+    // Fetches all the skybus data from all terminals
     func addSkybusT1Data() {
         RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t1s/allTimeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
@@ -60,7 +61,8 @@ class SkybusTableController: UITableViewController, UINavigationControllerDelega
             for n in json {
                 let ids = n.1["id"].intValue
                 let time = n.1["timetable"].stringValue
-                let newSkybus = SkybusT1(id: ids, timetable: time)
+                let timeIn = NSDate().timeInterval(time)
+                let newSkybus = SkybusT1(id: ids, timetable: time, leftTime: timeIn)
                 self.skybust1.append(newSkybus)
             }
             dispatch_async(dispatch_get_main_queue(),{
@@ -69,10 +71,61 @@ class SkybusTableController: UITableViewController, UINavigationControllerDelega
             
         }
     }
-    
-   
-    
+
 }
+
+// Extension to convert dates to string and vice versa
+extension NSDate{
+    func dateFromString(date: String) -> NSDate {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        formatter.locale = NSLocale.currentLocale()
+        let dates = formatter.dateFromString(date)
+        return dates!
+    }
+    
+    func stringFromDate() -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        formatter.locale = NSLocale.currentLocale()
+        let dateString = formatter.stringFromDate(self)
+        return dateString
+    }
+    
+    func timeInterval(dates: String) -> String {
+        var intes = String()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        
+        var some = dateFormatter.stringFromDate(NSDate())
+        some.replaceRange(Range<String.Index>(some.endIndex.advancedBy(-5) ..< some.endIndex), with: dates)
+            
+        let newDates = dateFormatter.dateFromString(some)
+        let current = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let dateComponents = calendar.components([.Hour, .Minute],fromDate: current, toDate: newDates!, options: [])
+        let hour = dateComponents.hour
+        let minutes = dateComponents.minute
+            
+        let hh = String(hour)
+        let mm = String(minutes)
+            
+        if hh == "0" {
+            let toAppend = hh + " hour" + " " + mm + " mins"
+            intes = toAppend
+        } else {
+            let toAppend = hh + " hour" + " " + mm + " mins"
+            intes = toAppend
+        }
+            
+        
+        return intes
+        
+    }
+}
+
 
 
 

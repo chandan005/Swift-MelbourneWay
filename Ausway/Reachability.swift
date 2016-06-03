@@ -5,7 +5,7 @@
 //  Created by Chandan Singh on 28/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
-
+// This class checks if the device is connected to WIFI or not. ONly WIFI and not cellular data.
 import Foundation
 import SystemConfiguration
 

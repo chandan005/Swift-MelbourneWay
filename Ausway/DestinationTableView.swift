@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 9/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+//  A Custom Table view for confirming the destination address entered
 
 import UIKit
 import MapKit
@@ -26,7 +27,7 @@ class DestinationTableView: UITableView {
         super.init(coder: aDecoder)
     }
 }
-
+// UiTableViewDDelegate
 extension DestinationTableView: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -70,6 +71,7 @@ extension DestinationTableView: UITableViewDelegate {
     }
 }
 
+// UITableView DataSource
 extension DestinationTableView: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

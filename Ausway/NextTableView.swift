@@ -4,7 +4,8 @@
 //
 //  Created by Chandan Singh on 16/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
-//
+// 
+// A Custom Table view for Next 5 Skybus Data
 
 import UIKit
 class NextTableView: UITableViewCell {

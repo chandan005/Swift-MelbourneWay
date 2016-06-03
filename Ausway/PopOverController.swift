@@ -5,11 +5,11 @@
 //  Created by Chandan Singh on 15/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
-
+// View Controller to display the PopOver
 import UIKit
 import SwiftyJSON
 
-
+// Protocol
 protocol PopOverControllerDelegate {
     func sendTimeTable(array: [SkybusT1]!)
 }
@@ -20,25 +20,12 @@ class PopOverController: UIViewController {
     
     var delegate: PopOverControllerDelegate?
     
+    // Gets the tag id for the "Done Button"
     var senderTag: Int?
-    
-    var arr = [String]()
-    
-    var time = [String]()
     
     var senders: UIButton!
     
     var skybust1: [SkybusT1]!
-    
-    var ssid: String = ""
-    
-    var bssid: String = ""
-    
-    var mac_address: String = ""
-    
-    var nearbyPoint: String = ""
-    
-    
 
     // Outlet for done button
     @IBOutlet weak var done: UIButton!
@@ -46,6 +33,7 @@ class PopOverController: UIViewController {
     // Outlet for terminal segment buttons
     @IBOutlet weak var t1t2t3: UISegmentedControl!
     
+    // Outlet for Passenger Type Button
     @IBOutlet weak var passengerType: UISegmentedControl!
     
     
@@ -53,14 +41,14 @@ class PopOverController: UIViewController {
         super.viewDidLoad()
         
         senderTag = done.tag
+        
         self.title = "Preferences"
         
         done.layer.cornerRadius = 8
         
         skybust1 = [SkybusT1]()
     
-        
-        addSkybusT1Data()
+        //addSkybusT1Data()
     }
     
 
@@ -77,58 +65,73 @@ class PopOverController: UIViewController {
         
         
         switch t1t2t3.selectedSegmentIndex {
+            // If Terminal 1 Selected
         case 0:
             addSkybusT1Data()
             switch self.senders.tag {
             case 1:
+                // If "Just Arrived" Selected
                 self.skybust1.removeFirst(10)
                 
             case 2:
+                // If "Getting the Luggage" Selected
                 self.skybust1.removeFirst(5)
                 
             case 3:
+                // If "Ready To Go" Selected
                 self.skybust1.removeFirst(2)
                 
             default:
                 break
             }
-            self.time = NSDate().timeInterval(self.arr)
+            
+            // Delegate the method with Skybus T1 Timetable to Airport Controller
             delegate?.sendTimeTable(self.skybust1)
             
         case 1:
+            // If Terminal 3 selected
             addSkybusT3Data()
             switch self.senders.tag {
             case 1:
+                // If "Just Arrived Selected"
                 self.skybust1.removeFirst(10)
                 
             case 2:
+                // If "Getting the Luggage" Selected
                 self.skybust1.removeFirst(5)
                 
             case 3:
+                // If "Ready To Go" Selected
                 self.skybust1.removeFirst(2)
                 
             default:
                 break
             }
-            self.time = NSDate().timeInterval(self.arr)
+            
+            // Delegate the method with Skybus T3 Timetable to Airport Controller
             delegate?.sendTimeTable(self.skybust1)
             
         case 2:
+            // If Terminal 4 Selected
             addSkybusT4Data()
             switch self.senders.tag {
             case 1:
+                // If "Just Arrived Selected"
                 self.skybust1.removeFirst(10)
                 
             case 2:
+                // If "Getting the Luggage" Selected
                 self.skybust1.removeFirst(5)
                 
             case 3:
+                // If "Ready To Go" Selected
                 self.skybust1.removeFirst(2)
                 
             default:
                 break
             }
-            self.time = NSDate().timeInterval(self.arr)
+           
+            // Delegate the method with Skybus T4 Timetable to Airport Controller
             delegate?.sendTimeTable(self.skybust1)
             
         default:
@@ -139,14 +142,16 @@ class PopOverController: UIViewController {
     
     
     
-    
+    // Stores the data for passenger type
     @IBAction func passengerSelected(sender: UISegmentedControl? = nil) {
         switch passengerType.selectedSegmentIndex {
         case 0:
+            // If Domestic button tapped
             postDomesticData()
             
             
         case 1:
+            // If International button tapped
             postInternationalData()
             
         default:
@@ -154,6 +159,7 @@ class PopOverController: UIViewController {
         }
     }
     
+    // Gets the data from Web API and stores in the Skybus Struct
     func addSkybusT1Data() {
         RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t1s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
@@ -161,7 +167,8 @@ class PopOverController: UIViewController {
             for n in json {
                 let ids = n.1["id"].intValue
                 let time = n.1["timetable"].stringValue
-                let newSkybus = SkybusT1(id: ids, timetable: time)
+                let timeIn = NSDate().timeInterval(time)
+                let newSkybus = SkybusT1(id: ids, timetable: time, leftTime: timeIn)
                 self.skybust1.append(newSkybus)
             }
             dispatch_async(dispatch_get_main_queue(),{
@@ -171,6 +178,7 @@ class PopOverController: UIViewController {
         }
     }
     
+    // Gets the data from Web API and stores in the Skybus Struct
     func addSkybusT3Data() {
         RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t3s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
@@ -178,7 +186,8 @@ class PopOverController: UIViewController {
             for n in json {
                 let ids = n.1["id"].intValue
                 let time = n.1["timetable"].stringValue
-                let newSkybus = SkybusT1(id: ids, timetable: time)
+                let timeIn = NSDate().timeInterval(time)
+                let newSkybus = SkybusT1(id: ids, timetable: time, leftTime: timeIn)
                 self.skybust1.append(newSkybus)
             }
             dispatch_async(dispatch_get_main_queue(),{
@@ -187,14 +196,16 @@ class PopOverController: UIViewController {
             
         }
     }
+    // Gets the data from Web API and stores in the Skybus Struct
     func addSkybusT4Data() {
-        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t3s/timeQueries"
+        RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/skybus_t4s/timeQueries"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
             
             for n in json {
                 let ids = n.1["id"].intValue
                 let time = n.1["timetable"].stringValue
-                let newSkybus = SkybusT1(id: ids, timetable: time)
+                let timeIn = NSDate().timeInterval(time)
+                let newSkybus = SkybusT1(id: ids, timetable: time, leftTime: timeIn)
                 self.skybust1.append(newSkybus)
             }
             dispatch_async(dispatch_get_main_queue(),{
@@ -204,6 +215,7 @@ class PopOverController: UIViewController {
         }
     }
     
+    // Posts the Domestic Data to Web API
     func postDomesticData(){
         let postEndpoint: String = "http://www.melbournecloudstudio.com/domestics"
         let url = NSURL(string: postEndpoint)!
@@ -233,6 +245,7 @@ class PopOverController: UIViewController {
         }).resume()
     }
     
+    // Posts the International Data to Web API
     func postInternationalData(){
         let postEndpoint: String = "http://www.melbournecloudstudio.com/internationals"
         let url = NSURL(string: postEndpoint)!
@@ -265,72 +278,5 @@ class PopOverController: UIViewController {
     
 }
 
-// Extension to convert dates to string and vice versa
-extension NSDate{
-    func dateFromString(date: String) -> NSDate {
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        formatter.locale = NSLocale.currentLocale()
-        let dates = formatter.dateFromString(date)
-        return dates!
-    }
-    
-    func stringFromDate() -> String {
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        formatter.locale = NSLocale.currentLocale()
-        let dateString = formatter.stringFromDate(self)
-        return dateString
-    }
-    
-    func timeInterval(dates: [String]) -> [String] {
-        var intes = [String]()
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
-        
-        for date in dates {
-            var some = dateFormatter.stringFromDate(NSDate())
-            some.replaceRange(Range<String.Index>(some.endIndex.advancedBy(-5) ..< some.endIndex), with: date)
-            
-            let newDates = dateFormatter.dateFromString(some)
-            let current = NSDate()
-            let calendar = NSCalendar.currentCalendar()
-            let dateComponents = calendar.components([.Hour, .Minute],fromDate: current, toDate: newDates!, options: [])
-            let hour = dateComponents.hour
-            let minutes = dateComponents.minute
-            
-            let hh = String(hour)
-            let mm = String(minutes)
-            
-            if hh == "0" {
-                let toAppend = hh + " hour" + " " + mm + " mins"
-                intes.append(toAppend)
-            } else {
-                let toAppend = hh + " hour" + " " + mm + " mins"
-                intes.append(toAppend)
-            }
-            
-        }
-        return intes
-        
-    }
-}
-
-// Extension to remove elements from array
-extension Array where Element: Equatable{
-    mutating func removeObject(object: Element) {
-        if let index = self.indexOf(object) {
-            self.removeAtIndex(index)
-        }
-    }
-    
-    mutating func removeObjectsInArray(array: [Element]) {
-        for object in array {
-            self.removeObject(object)
-        }
-    }
-}
 
 

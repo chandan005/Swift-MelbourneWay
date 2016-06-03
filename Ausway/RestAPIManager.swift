@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 24/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// This class is a wrapper that talks to the API and gets, posts the JSON Data by usinf SwiftyJSON Library
 
 import Foundation
 import SwiftyJSON

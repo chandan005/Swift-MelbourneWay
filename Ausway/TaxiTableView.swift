@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 21/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// A Custom Table view for Taxi Data
 
 import UIKit
 class TaxiTableView: UITableViewCell {

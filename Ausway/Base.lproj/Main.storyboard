@@ -295,7 +295,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taxi" highlightedImage="Taxi" translatesAutoresizingMaskIntoConstraints="NO" id="UQ5-JO-2vM">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UQ5-JO-2vM">
                                             <rect key="frame" x="23" y="11" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="32" id="BfW-Ro-Ff0"/>
@@ -334,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFb-je-Aco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="527.99999999999989"/>
+            <point key="canvasLocation" x="2119" y="527"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="1gw-v7-PMZ">

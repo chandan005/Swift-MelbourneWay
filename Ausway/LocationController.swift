@@ -5,6 +5,8 @@
 //  Created by Chandan Singh on 9/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// Gets the Current location, let's user enter the destination address and other information to display the
+// route
 
 import UIKit
 import CoreLocation
@@ -20,15 +22,11 @@ class LocationController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var checkAddressButtons: [UIButton]!
     
-    // It is extimate fare button
-    
     @IBOutlet weak var estimateFareButton: UIButton!
-    
     
     @IBOutlet weak var numberOfPassengersField: UITextField!
     
     @IBOutlet weak var passengerStepper: UIStepper!
-    
     
     @IBOutlet weak var viewRouteButton: UIButton!
     
@@ -39,7 +37,6 @@ class LocationController: UIViewController, UITextFieldDelegate {
     
     var locationTuples: [(textField: UITextField!, mapItem: MKMapItem?)]!
     
-
     // Stores travel Details
     var travelPlans: String!
     
@@ -133,7 +130,7 @@ class LocationController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
-    
+    // Prepare for Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "viewmap") {
             let routeViewController = segue.destinationViewController as! RouteViewController
@@ -146,7 +143,7 @@ class LocationController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
+    // Alerts if, correct address not entered
     func showAlert(alertString: String) {
         let alert = UIAlertController(title: nil, message: alertString, preferredStyle: .Alert)
         let okButton = UIAlertAction(title: "OK",
@@ -156,11 +153,13 @@ class LocationController: UIViewController, UITextFieldDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    // Format the address entered
     func formatAddressFromPlacemark(placemark: CLPlacemark) -> String {
         return (placemark.addressDictionary!["FormattedAddressLines"] as!
             [String]).joinWithSeparator(", ")
     }
     
+    // Displasy possible destination address in a table
     func showAddressTable(addresses: [String], textField: UITextField,
                           placemarks: [CLPlacemark], sender: UIButton) {
         
@@ -206,7 +205,6 @@ class LocationController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    //&& prospectiveText <= Int(11).description && prospectiveText >= Int(0).description) {
     func textFieldDidBeginEditing(textField: UITextField) {
         
         if textField.tag == 3 {
@@ -243,7 +241,7 @@ class LocationController: UIViewController, UITextFieldDelegate {
 }
 
 
-
+// Extension to get all the location information and store in the text fields
 extension LocationController: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -258,11 +256,6 @@ extension LocationController: CLLocationManagerDelegate {
                                                     
                                                     self.checkAddressButtons.filter{$0.tag == 1}.first!.selected = true
                                                     
-                                                    /*if (self.checkAddressButtons.first?.state == .Selected ){
-                                                        self.checkAddressButtons.first?.backgroundColor = UIColor(red: 76.0/255.0, green: 175.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-                                                    } else {
-                                                        self.checkAddressButtons.first?.backgroundColor = UIColor.orangeColor()
-                                                    }*/
                                                 }
         })
         

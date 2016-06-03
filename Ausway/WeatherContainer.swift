@@ -5,7 +5,7 @@
 //  Created by Chandan Singh on 7/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
-
+// The container method for Weather from the landing page
 import UIKit
 
 class WeatherContainer: UIViewController {

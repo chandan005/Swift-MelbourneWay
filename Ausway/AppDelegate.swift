@@ -28,9 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //Twitter.sharedInstance().startWithConsumerKey("gpluIQTuMCp4DGt7WRdFzVjC5", consumerSecret:	"UnWz0VFj1JWWEoSEotWmhz6tz8Jj1kCugPQ9X4oDELvtxjiSsL")
-        //copyBundledSQLiteDB()
-        self.lookForWifi()
+        
+        //self.lookForWifi()
         Fabric.with([Twitter.self])
         return true
     }
@@ -51,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        self.lookForWifi()
+        //self.lookForWifi()
        
     }
 

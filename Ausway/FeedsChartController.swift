@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 28/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// Use of Charts Library to display pie chart with some dummy data
 
 import UIKit
 import Charts

@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 28/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// Fetches the Weather data from open weather map API
 
 import UIKit
 

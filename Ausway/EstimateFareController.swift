@@ -5,6 +5,7 @@
 //  Created by Chandan Singh on 12/05/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// View Controller that gets the value from RouteViewController and displays the estimated fare
 
 import UIKit
 

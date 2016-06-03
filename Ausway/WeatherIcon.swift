@@ -5,6 +5,8 @@
 //  Created by Chandan Singh on 28/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// This class is not implemented in the Project. The purpose of this class is to display images
+// of weather type in WeatherController as for the temperature
 
 import Foundation
 

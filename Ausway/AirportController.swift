@@ -5,6 +5,8 @@
 //  Created by Chandan Singh on 15/04/2016.
 //  Copyright © 2016 RMIT. All rights reserved.
 //
+// View Controlelr displaying the landing page of the application, it also conforms to the PopOverController
+//delegate to get tha data for which buttons were clicked in the popover page.
 
 import UIKit
 import Foundation
@@ -22,15 +24,12 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
     
     var skybust1: [SkybusT1]!
     
-    
-    
-    
     @IBOutlet weak var weatherContainer: UIView!
     
     @IBOutlet weak var chartContainer: UIView!
     
-    
     let tapRecChart = UITapGestureRecognizer()
+    
     let tapRecWeather = UITapGestureRecognizer()
     
 
@@ -43,8 +42,10 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         
         // Set the color of navigation bar
         navigationController?.navigationBar.barTintColor = UIColor(red: 23.0/255.0, green: 1.0/255.0, blue: 23.0/255.0, alpha: 1.0)
+        
         //Set the text color of the navigation bar title
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         // Set the color of other items of navigation bar
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
 
@@ -53,7 +54,6 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         passengerButtons[1].layer.cornerRadius = 8
         passengerButtons[2].layer.cornerRadius = 8
         
-        //passengerButtons[0].backgroundColor = UIColor(red: 255.0/255.0, green: 200.0/255.0, blue: 87.0/255.0, alpha: 1.0)
         
         tapRecChart.addTarget(self, action: #selector(AirportController.chartTapped))
         chartContainer.addGestureRecognizer(tapRecChart)
@@ -63,19 +63,19 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         
     }
     
+    // When Chart section tapped perform segue
     func chartTapped() {
         performSegueWithIdentifier("showChart", sender: self)
     }
     
+    // When Weather Section tapped perform segue
     func weatherTapped() {
         performSegueWithIdentifier("showWeather", sender: self)
     }
     override func viewWillAppear(animated: Bool) {
         navigationController?.navigationBarHidden = false
-        //self.tabBarController?.title = "Where are you?"
     }
     
-    // Mark: Actions
     
     // Show Popover Controller when button clicked
     @IBAction func justArrivedAction(sender: AnyObject) {
@@ -100,7 +100,7 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
     
     
     
-    
+    // Displays Popover when buttons clicked
     func getPopOver(sender: AnyObject) {
         let VC = storyboard?.instantiateViewControllerWithIdentifier("PopOverController") as! PopOverController
         VC.delegate = self
@@ -118,12 +118,13 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         self.presentViewController(VC, animated: true, completion: nil)
     }
     
+    // Presentation Style for the Popover
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .None
     }
     
 
-    
+    // Implements the delegate method from the PopOverController
     func sendTimeTable(array1: [SkybusT1]!) {
         self.skybust1 = array1
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -131,18 +132,18 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         
     }
     
+    // Checks for the segue identifier to perform the segue to TimeTableController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "toTabBar" {
             let tabBarController = segue.destinationViewController as! UITabBarController
-            //let navigationController = tabBarController.viewControllers![0] as! UINavigationController
             let nextFiveController = tabBarController.viewControllers?.first as! TimeTableViewController
             nextFiveController.skybust1 = skybust1
         }        
         
     }
     
-    
+    // Displays the Weather and Chart Sections 
     func getWeatherAndChart() {
         let CC = storyboard?.instantiateViewControllerWithIdentifier("aa") as! FeedsChartController
         CC.preferredContentSize = CGSize(width: 250, height: 250)
@@ -150,14 +151,6 @@ class AirportController: UIViewController, UIPopoverPresentationControllerDelega
         self.addChildViewController(CC)
         self.view.addSubview(CC.view)
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 }

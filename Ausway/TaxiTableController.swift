@@ -11,9 +11,11 @@ import SwiftyJSON
 
 class TaxiTableController: UITableViewController, UINavigationControllerDelegate {
     
-    
+    var sections: [TaxiStand] = TaxiStandItems().getItemsFromData()
     
     var taxis: [TaxiObject]!
+    
+    var image: [UIImage]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,11 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
         navigationController?.delegate = self
         
         taxis = [TaxiObject]()
+        image = [UIImage(named: "Taxi.png")!, UIImage(named: "Distance.png")!, UIImage(named: "Taxi.png")!, UIImage(named: "Distance.png")!, UIImage(named: "Taxi.png")!, UIImage(named: "Distance.png")!, UIImage(named: "Taxi.png")!, UIImage(named: "Distance.png")!, UIImage(named: "Taxi.png")!, UIImage(named: "Distance.png")!]
         
         addTaxiData()
+        
+        self.tableView.sectionIndexBackgroundColor = UIColor.orangeColor()
         
    
     }
@@ -35,27 +40,31 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
     
     // How many sections in the table?
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
     
     // How many rows in the table?
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taxis.count
+        return sections[section].items.count
     }
     
-    // The content of the table
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].heading
+    }
+    
+    // The contents of the table
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("taxicell", forIndexPath: indexPath) as! TaxiTableView
-        
-        let tableCell = taxis[indexPath.row]
-        
-        cell.taxiLabel?.text = tableCell.taxi_number
+    
+        cell.taxiLabel.text = sections[indexPath.section].items[indexPath.row]
+        cell.taxiImage.image = image[indexPath.row]
         
         return cell
         
     }
     
+    // Fetches the Taxi Data from API
     func addTaxiData() {
         RestAPIManager.sharedInstance.url = "http://www.melbournecloudstudio.com/taxis"
         RestAPIManager.sharedInstance.getRandomItem { (json: JSON) in
@@ -75,7 +84,7 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
         }
     }
    
-    
+    /*// Alternate Method the retriece the data from API
     func addSomething(){
         let endPoint: String = "http://www.melbournecloudstudio.com/taxis"
         guard let url = NSURL(string: endPoint) else {
@@ -118,7 +127,7 @@ class TaxiTableController: UITableViewController, UINavigationControllerDelegate
         })
         
         task.resume()
-    }
+    }*/
    
  
     
